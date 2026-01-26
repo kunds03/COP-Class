@@ -6,6 +6,7 @@ int main(){
     bool flag;
 
     int month1, day1, year1, month2, day2, year2;
+    
     printf("Enter first date (mm/dd/yyyy): ");
     scanf("%d/%d/%d", &month1, &day1, &year1);
 
