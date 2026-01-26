@@ -20,12 +20,13 @@ int main(){
     int dailyRate = 0;
     int weekMaxRate = 0;
 
-    printf("Please select from four types of AC: 1, 2, 3, and 4 \nEnter Selection: ");
+    printf("Please select from four types of AC: 1, 2, 3, and 4\n");
+    printf("Enter selection: ");
     scanf("%d", &selection);
 
     // Checks if the selection is invalid or not
     if(selection < 1 || selection > 4){
-        printf("Invalid selection. Select from 1 to 4.\n");
+        printf("Invalid selection. Select from 1 to 4.");
     }
 
     else{
@@ -34,7 +35,7 @@ int main(){
         
         //Checks if the number of days is invalid or not
         if(days < 0){
-            printf("Invalid days.\n");
+            printf("Invalid days.");
         }
 
         else{
@@ -77,7 +78,7 @@ int main(){
                 charge += (remainingDays * dailyRate);
             }
             
-            printf("Charge($): %d\n", charge);
+            printf("Charge($):%d", charge);
         }
     }
 
