@@ -79,7 +79,7 @@ int main(){
                 charge = weeks * weekMaxRate;
 
                 if(remainingDays>0){
-                    remainingCharge = firstDayRate + (dailyRate * (days - 1));
+                    remainingCharge = firstDayRate + (dailyRate * (remainingDays - 1));
                     if(remainingCharge> weekMaxRate){
                         remainingCharge = weekMaxRate;
                     }
