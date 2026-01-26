@@ -11,6 +11,7 @@ int main(){
     int days;
 
     int charge = 0;
+    int remainingCharge = 0;
 
     int weeks = 0;
     int remainingDays = 0;
@@ -19,6 +20,7 @@ int main(){
     int firstDayRate = 0;
     int dailyRate = 0;
     int weekMaxRate = 0;
+    
 
     printf("Please select from four types of AC: 1, 2, 3, and 4\n");
     printf("Enter selection: ");
@@ -75,7 +77,14 @@ int main(){
                 remainingDays = days % 7;
 
                 charge = weeks * weekMaxRate;
-                charge += (remainingDays * dailyRate);
+
+                if(remainingDays>0){
+                    remainingCharge = firstDayRate + (dailyRate * (days - 1));
+                    if(remainingCharge> weekMaxRate){
+                        remainingCharge = weekMaxRate;
+                    }
+                }
+                charge += remainingCharge;
             }
             
             printf("Charge($):%d", charge);
