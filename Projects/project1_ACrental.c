@@ -25,7 +25,7 @@ int main(){
 
     // Checks if the selection is invalid or not
     if(selection < 1 || selection > 4){
-        printf("Invalid selection. Select from 1 to 4.");
+        printf("Invalid selection. Select from 1 to 4.\n");
     }
 
     else{
@@ -34,7 +34,7 @@ int main(){
         
         //Checks if the number of days is invalid or not
         if(days < 0){
-            printf("Invalid days.");
+            printf("Invalid days.\n");
         }
 
         else{
@@ -77,7 +77,7 @@ int main(){
                 charge += (remainingDays * dailyRate);
             }
             
-            printf("Charge($): %d", charge);
+            printf("Charge($): %d\n", charge);
         }
     }
 
