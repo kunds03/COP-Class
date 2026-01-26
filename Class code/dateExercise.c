@@ -58,12 +58,14 @@ int main(){
             }
         }
     }
-    //Checks the flag to determine which date is earlier
 
-    if(flag){ //if flag != 0 means true
+    //Checks the flag to determine which date is earlier
+    //if flag != 0 means true
+    if(flag){
         printf("%d/%d/%d is earlier", month1, day1, year1);
     }
-    else{ // else flag == 0 means false
+    // else flag == 0 means false
+    else{
         printf("%d/%d/%d is earlier", month2, day2, year2);
     }
     return 0;
