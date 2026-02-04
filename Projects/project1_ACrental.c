@@ -26,7 +26,7 @@ int main(){
     printf("Enter selection: ");
     scanf("%d", &selection);
 
-    // Checks if the rental AC selection made by the user is invalid or not
+    // Checks if the rental AC selection made by the user is invalid if so exit
     if(selection < 1 || selection > 4){
         printf("Invalid selection. Select from 1 to 4.");
     }
@@ -35,14 +35,14 @@ int main(){
         printf("Enter days: ");
         scanf("%d", &days);
         
-        //Checks if the number of days for renting the AC is invalid or not
+        //Checks if the number of days for renting the AC is invalid if so exit
         if(days < 0){
             printf("Invalid days.");
         }
 
         else{
 
-            //Setting the First Day, Daily, and Weekly rates based on the AC selection made
+            //based on the AC selection made by user indentify the rental plan
             switch(selection){
                 case 1:
                     firstDayRate = 50;
@@ -66,29 +66,35 @@ int main(){
                     break;
             } 
             
-            //Evaulating the charges based on the number of days the AC is rented
+            //Evaulating the charges based on the number of days the AC is rented 
             if(days < 7){
                 charge = firstDayRate;
                 charge += (dailyRate * (days - 1));
                 
-                if(charge>weekMaxRate){
+                //If charge is greater Weekly Maximum charge, reset/reduce the charge to the Weekly Maximum charge
+                if(charge > weekMaxRate){
                     charge = weekMaxRate;
                 }
             }
             
             else{
+                //Evaulate number of weeks and days
                 weeks = days / 7;
                 remainingDays = days % 7;
 
+                //Calculate charge for number of weeks AC is rented
                 charge = weeks * weekMaxRate;
 
-                if(remainingDays>0){
+                //Calculate the charge for the remaining days
+                if(remainingDays > 0){
                     remainingCharge = dailyRate * remainingDays;
 
-                    if(remainingCharge> weekMaxRate){
+                    //If charge is greater Weekly Maximum charge, reset/reduce the charge to the Weekly Maximum charge
+                    if(remainingCharge > weekMaxRate){
                         remainingCharge = weekMaxRate;
                     }
                 }
+
                 charge += remainingCharge;
             }
             

@@ -1,6 +1,6 @@
 /*Kundana Anumakonda
 File Name: project2.c
-Description: This program is for a local AC business to caculate the cost for AC rental*/
+Description: This program is */
 
 
 #include <stdio.h>
@@ -21,30 +21,35 @@ int main(){
         ASCII = (int)character;
 
         if(ASCII >= 65 && ASCII <= 90){
+            printf("You typed: %c (ASCII %d)\n", character, ASCII);
             character += 32;
             printf("Class: Uppercase Letter\n");
             printf("Converted to: %c\n", character);
         }
 
         else if(ASCII >= 97 && ASCII <= 122){
+            printf("You typed: %c (ASCII %d)\n", character, ASCII);
             character -= 32;
             printf("Class: Lowercase Letter\n");
             printf("Converted to: %c\n", character);
         }
 
         else if(ASCII >= 65 && ASCII <= 90){
+            printf("You typed: %c (ASCII %d)\n", character, ASCII);
             printf("Class: Digit\n");
-            printf("Converted to: %c\n", character);
+            printf("No conversion: %c\n", character);
         }
 
         else if(ASCII >= 32 && ASCII <= 126){
+            printf("You typed: %c (ASCII %d)\n", character, ASCII);
             printf("Class: Printable Symbol\n");
-            printf("Converted to: %c\n", character);
+            printf("No conversion: %c\n", character);
         }
 
         else{
+            printf("You typed: %c (ASCII %d)\n", character, ASCII);
             printf("Class: Non-printable Character\n");
-            printf("Converted to: %c\n", character);
+            printf("No conversion: %c\n", character);
         }
 
     }while(1);
