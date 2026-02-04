@@ -26,7 +26,7 @@ int main(){
     printf("Enter selection: ");
     scanf("%d", &selection);
 
-    // Checks if the selection is invalid or not
+    // Checks if the rental AC selection made by the user is invalid or not
     if(selection < 1 || selection > 4){
         printf("Invalid selection. Select from 1 to 4.");
     }
@@ -35,14 +35,14 @@ int main(){
         printf("Enter days: ");
         scanf("%d", &days);
         
-        //Checks if the number of days is invalid or not
+        //Checks if the number of days for renting the AC is invalid or not
         if(days < 0){
             printf("Invalid days.");
         }
 
         else{
 
-            //Setting the rates based on the selection made
+            //Setting the First Day, Daily, and Weekly rates based on the AC selection made
             switch(selection){
                 case 1:
                     firstDayRate = 50;
@@ -66,7 +66,7 @@ int main(){
                     break;
             } 
             
-            //Evaulating the charges based on the number of days
+            //Evaulating the charges based on the number of days the AC is rented
             if(days < 7){
                 charge = firstDayRate;
                 charge += (dailyRate * (days - 1));
