@@ -16,7 +16,7 @@ int main(){
     int weeks = 0;
     int remainingDays = 0;
 
-    //3 Arrays setting the First Day rate, Daily Rate, and Weekly Max Rate in the order of the AC
+    //3 Arrays setting the First Day rate, Daily Rate, and Weekly Max Rate in the order of the AC rentals
     int firstDayRate[4] = {50,60,80,200};
     int dailyRate[4] = {30,35,50,120};
     int weekMaxRate[4] = {160,200,280,550};
@@ -42,6 +42,7 @@ int main(){
 
         else{
             //Evaulating the charges based on the number of days the AC is rented
+            //The selection - 1 is to get the proper index for the AC selected 
 
             if(days < 7){
                 charge = firstDayRate[selection-1];
